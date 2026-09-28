@@ -11,10 +11,12 @@ body {
 }
 
 .cover_page {
+
+
     width: 100%;
     min-height: 100dvh;
 
-    display: flex;
+    display: flex ;
     flex-direction: column;
     align-items: center;
 
@@ -115,7 +117,7 @@ body {
 .question-section {
     width: 100%;
     max-width: 600px;
-
+    display: none ;
     text-align: center;
 
     padding-bottom: 30px;
@@ -187,6 +189,13 @@ body {
 
     box-shadow:
         0 8px 20px rgba(80, 50, 90, 0.15);
+
+    transition: left 0.4s ease, top 0.4s ease;
+
+
+
+
+
 }
 
 
@@ -262,4 +271,96 @@ body {
 
 #inputMessage {
     margin-top: 10px;
+}
+
+/*Password Section*/
+
+/* =========================
+   PASSWORD SCREEN
+========================= */
+
+#passwordScreen {
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    padding: 25px 20px;
+}
+
+#passwordScreen h2 {
+    color: #5c456b;
+    font-size: clamp(20px, 5vw, 26px);
+    margin-bottom: 20px;
+}
+
+/* Password input */
+#passwordInput {
+    width: 85%;
+    max-width: 280px;
+
+    padding: 14px 20px;
+
+    border: 2px solid #ffb6c9;
+    border-radius: 30px;
+
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    font-size: 16px;
+    text-align: center;
+
+    color: #5c456b;
+
+    box-shadow:
+        0 6px 18px rgba(255, 111, 145, 0.15);
+
+    transition: 0.25s ease;
+}
+
+/* When you click the input */
+#passwordInput:focus {
+    border-color: #ff6f91;
+
+    box-shadow:
+        0 0 0 4px rgba(255, 111, 145, 0.12),
+        0 8px 20px rgba(255, 111, 145, 0.2);
+}
+
+/* Placeholder */
+#passwordInput::placeholder {
+    color: #b59aaa;
+}
+
+/* Enter button */
+#passwordButton {
+    margin-top: 15px;
+
+    padding: 13px 28px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: #ff6f91;
+    color: white;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(255, 111, 145, 0.3);
+
+    transition: transform 0.2s ease;
+}
+
+#passwordButton:active {
+    transform: scale(0.95);
+}
+
+/* Wrong password message */
+#passwordMessage {
+    margin-top: 12px;
+    color: #000000;
+    font-size: 14px;
 }

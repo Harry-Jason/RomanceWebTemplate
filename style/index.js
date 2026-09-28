@@ -6,6 +6,39 @@ const question = document.getElementById("question");
 const yesButton = document.getElementById("yesButton");
 const noButton = document.getElementById("noButton");
 
+const correctPassword = "27.11.1999";
+
+const passwordScreen = document.getElementById("passwordScreen");
+const passwordInput = document.getElementById("passwordInput");
+const passwordButton = document.getElementById("passwordButton");
+const passwordMessage = document.getElementById("passwordMessage");
+
+
+
+
+
+passwordButton.addEventListener("click", function () {
+
+    if (passwordInput.value === correctPassword) {
+
+        // Hide password
+        passwordScreen.style.display = "none";
+
+        // Show question
+        document.querySelector(".question-section").style.display = "block";
+
+    } else {
+
+        passwordMessage.textContent = "Passwordကို ကိုကို့ စီမှာပြန်တောင်းပါ။❤️";
+        passwordInput.value = "";
+        passwordInput.focus();
+
+    }
+
+});
+
+
+
 
 // =========================
 // YES BUTTON
@@ -17,7 +50,7 @@ yesButton.addEventListener("click", function () {
     character.src = "/lib/img/TransparentCha/ExcitedTeanCat.png";
 
     // Change question
-    question.textContent = "I knew it! ❤️";
+    question.textContent = "ဟီးဟီး ❤️";
 
 
         // Hide Yes / No buttons
@@ -40,7 +73,7 @@ submitAnswer.addEventListener("click", function () {
     } else {
 
         inputMessage.textContent =
-            "ဟယ်... အာဘွားလို့ ရိုက်ပါဆို 🥺❤️";
+            "အာဘွား ပေးပါဆို 🥺❤️";
 
     }
 
@@ -70,11 +103,12 @@ const noCharacters = [
 ];
 
 const noMessages = [
-    "Do you love me? ❤️",
-    "Really? 🥺",
-    "Please don't say no 😭",
-    "You can't escape me! 😂❤️"
+    "ဟာ မမ နော် 🥺",
+    "တကယ်ကြီးမချစ်တော့ဘူးလား? 🥺",
+    " ငိုမှာနော်။ 😭",
+    " ဘေဘီ.... မချစ်တော့ဘူးလို့မပြောပါနဲ့ 🥺"
 ];
+
 
 
 noButton.addEventListener("click", function () {
@@ -114,3 +148,6 @@ noButton.addEventListener("click", function () {
 
 
 });
+
+noButton.style.transition = "left 0.4s ease, top 0.4s ease";
+
