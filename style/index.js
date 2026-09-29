@@ -6,7 +6,7 @@ const question = document.getElementById("question");
 const yesButton = document.getElementById("yesButton");
 const noButton = document.getElementById("noButton");
 
-const correctPassword = "27.11.1999";
+const correctPassword = "12.11.1999";
 
 const passwordScreen = document.getElementById("passwordScreen");
 const passwordInput = document.getElementById("passwordInput");
